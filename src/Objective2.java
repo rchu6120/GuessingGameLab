@@ -18,6 +18,9 @@ public class Objective2 {
                 max = guess;
                 guess = (int)Math.random()*(max-1);
             }
+            if (n == guess) {
+                System.out.println("You got it! The number is " + n + "!");
+            }
         }
     }
 }

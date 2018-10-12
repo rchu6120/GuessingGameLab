@@ -5,7 +5,9 @@ public class Objective1 {
         Scanner input = new Scanner(System.in);
         System.out.print("What's your name?");
         String name = input.nextLine();
-        System.out.print("Hey" + name + ", guess my secret number!");
+        System.out.print("Hey" + name + ", what difficulty would you like? Type 1, Type 2, Type 3, or Type 4?");
+        String type = input.nextLine();
+
         int n = (int)Math.random()*10+1;
         int guess = input.nextInt();
         int count = 0;
