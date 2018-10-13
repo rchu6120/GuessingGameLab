@@ -9,7 +9,7 @@ public class Objective2 {
         int count = 0;
         int min = 1;
         int max = 100;
-        String response = input.nextLine();
+        String response = input.nextLine();aaaaa
         if (response.equals("higher")) {
             min = computer;
             computer = (int)(Math.random()*(100-computer))+(computer+1);
