@@ -9,7 +9,7 @@ public class Objective1 {
         String type = input.nextLine();
         int count = 0;
         if (type.equals("Type 1")) {
-            int n = (int) Math.random() * 10 + 1;
+            int n = (int)(Math.random()*10)+ 1;
             System.out.print("Guess my secret number from 1-10! ");
             int guess = input.nextInt();
             while (guess != n) {
@@ -17,10 +17,10 @@ public class Objective1 {
                 guess = input.nextInt();
                 count++;
             }
-            System.out.println("You got it" + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
+            System.out.println("You got it " + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
         }
         if (type.equals("Type 2")) {
-            int n = (int) Math.random() * 100 + 1;
+            int n = (int)(Math.random()*100)+ 1;
             System.out.print("Guess my secret number from 1-100! ");
             int guess = input.nextInt();
             while (guess != n) {
@@ -28,10 +28,10 @@ public class Objective1 {
                 guess = input.nextInt();
                 count++;
             }
-            System.out.println("You got it" + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
+            System.out.println("You got it " + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
         }
         if (type.equals("Type 3")) {
-            int n = (int) Math.random() * 1000 + 1;
+            int n = (int)(Math.random()*1000)+ 1;
             System.out.print("Guess my secret number from 1-1000! ");
             int guess = input.nextInt();
             while (guess != n) {
@@ -39,10 +39,10 @@ public class Objective1 {
                 guess = input.nextInt();
                 count++;
             }
-            System.out.println("You got it" + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
+            System.out.println("You got it " + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
         }
         if (type.equals("Type 4")) {
-            int n = (int) Math.random() * 10000 + 1;
+            int n = (int)(Math.random()*10000)+ 1;
             System.out.print("Guess my secret number from 1-10000! ");
             int guess = input.nextInt();
             while (guess != n) {
@@ -50,7 +50,7 @@ public class Objective1 {
                 guess = input.nextInt();
                 count++;
             }
-            System.out.println("You got it" + name + "!" + " It took you " + count + " times." + " The number is " + n + "!");
+            System.out.println("You got it " + name + "!" + " It took you " + count + " tries." + " The number is " + n + "!");
         }
     }
 }

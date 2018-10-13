@@ -3,24 +3,26 @@ import java.util.Scanner;
 public class Objective2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n = (int)Math.random()*100+1;
-        int guess = (int)Math.random()*100+1;
+        System.out.print("Hey computer, guess my number from 1-100!");
+        int computer = (int)(Math.random()*100)+ 1;
+        int computer = input.nextInt();
+        int count = 0;
         int min = 1;
         int max = 100;
-        while (n != guess) {
-            if (n > guess) {
-                System.out.print("Guess higher!");
-                min = guess;
-                guess = (int)Math.random()*(100-min);
-            }
-            if (n < guess) {
-                System.out.print("Guess lower!");
-                max = guess;
-                guess = (int)Math.random()*(max-1);
-            }
-            if (n == guess) {
-                System.out.println("You got it! The number is " + n + "!");
-            }
+        String response = input.nextLine();
+        if (response.equals("higher")) {
+            min = computer;
+            computer = (int)(Math.random()*(100-computer))+(computer+1);
+            count++;
+        }
+        if (response.equals("lower")) {
+            max = computer;
+            computer = (int)(Math.random()*(computer-1))+1;
+            count++;
+        }
+        if (response.equals("correct")) {
+            System.out.println("Good job computer! The number is " + computer + ". It took " + count + " tries.");
         }
     }
 }
+
