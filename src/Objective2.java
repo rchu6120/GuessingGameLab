@@ -9,15 +9,15 @@ public class Objective2 {
         int count = 0;
         int min = 1;
         int max = 100;
-        String response = input.nextLine();aaaaa
+        String response = input.nextLine();
         if (response.equals("higher")) {
             min = computer;
-            computer = (int)(Math.random()*(100-computer))+(computer+1);
+            computer = (int)(Math.random()*(100 - computer))+(computer + 1);
             count++;
         }
         if (response.equals("lower")) {
             max = computer;
-            computer = (int)(Math.random()*(computer-1))+1;
+            computer = (int)(Math.random()*(computer - 1))+1;
             count++;
         }
         if (response.equals("correct")) {
