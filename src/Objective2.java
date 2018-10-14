@@ -3,28 +3,32 @@ import java.util.Scanner;
 public class Objective2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Hey computer, guess my number from 1-100!");
-        int computer = input.nextInt((int) (Math.random() * 100) + 1);
+        System.out.print("Hey computer, guess my number from 1-100! ");
+        int computer =(int)(Math.random() * 100) + 1;
+        System.out.println(computer);
         int count = 0;
         int min = 1;
         int max = 100;
         String response = input.nextLine();
-        if (response.equals("higher")) {
-            min = computer;
-            computer = (int) (Math.random() * (100 - computer)) + (computer + 1);
-            count++;
-        }
-        if (response.equals("lower")) {
-            max = computer;
-            computer = (int) (Math.random() * (computer - 1)) + 1;
-            count++;
-        }
-        if (response.equals("correct")) {
-            if (count == 1) {
-                System.out.println("Good job computer! The number is " + computer + ". It took " + count + " try.");
-            } else {
-                System.out.println("Good job computer! The number is " + computer + ". It took " + count + " tries.");
+        while (!response.equals("correct")) {
+            if (response.equals("higher")) {
+                min = computer;
+                computer = (int)(Math.random() * (max - min)) + (min + 1);
+                System.out.println(computer);
+                count++;
             }
+            if (response.equals("lower")) {
+                max = computer;
+                computer = (int)(Math.random() * (max - min)) + 1;
+                System.out.println(computer);
+                count++;
+            }
+            String response = input.nextLine();
+        }
+        if (count == 1) {
+            System.out.println("Good job computer! The number is " + computer + ". It took " + count + " try.");
+        } else {
+            System.out.println("Good job computer! The number is " + computer + ". It took " + count + " tries.");
         }
     }
 }
